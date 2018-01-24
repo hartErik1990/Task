@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		44F1C649201924E400DD0765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C648201924E400DD0765 /* AppDelegate.swift */; };
-		44F1C64B201924E400DD0765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C64A201924E400DD0765 /* ViewController.swift */; };
 		44F1C64E201924E400DD0765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F1C64C201924E400DD0765 /* Main.storyboard */; };
 		44F1C650201924E400DD0765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44F1C64F201924E400DD0765 /* Assets.xcassets */; };
 		44F1C653201924E400DD0765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F1C651201924E400DD0765 /* LaunchScreen.storyboard */; };
+		44F1C65B201925BB00DD0765 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C65A201925BB00DD0765 /* TaskListTableViewController.swift */; };
+		44F1C65D201926ED00DD0765 /* TaskDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C65C201926ED00DD0765 /* TaskDetailTableViewController.swift */; };
+		44F1C65F201927ED00DD0765 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C65E201927ED00DD0765 /* CoreDataStack.swift */; };
+		44F1C6622019291800DD0765 /* Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C6602019291800DD0765 /* Task.xcdatamodeld */; };
+		44F1C66420192AAF00DD0765 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C66320192AAF00DD0765 /* Task+Convenience.swift */; };
+		44F1C66620192BC900DD0765 /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F1C66520192BC900DD0765 /* TaskController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44F1C645201924E400DD0765 /* Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44F1C648201924E400DD0765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		44F1C64A201924E400DD0765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44F1C64D201924E400DD0765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44F1C64F201924E400DD0765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44F1C652201924E400DD0765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44F1C654201924E400DD0765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44F1C65A201925BB00DD0765 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		44F1C65C201926ED00DD0765 /* TaskDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailTableViewController.swift; sourceTree = "<group>"; };
+		44F1C65E201927ED00DD0765 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		44F1C6612019291800DD0765 /* Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Task.xcdatamodel; sourceTree = "<group>"; };
+		44F1C66320192AAF00DD0765 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
+		44F1C66520192BC900DD0765 /* TaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44CA749F2019319C001DE055 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44F1C65A201925BB00DD0765 /* TaskListTableViewController.swift */,
+				44F1C65C201926ED00DD0765 /* TaskDetailTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		44CA74A0201931AF001DE055 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44F1C6602019291800DD0765 /* Task.xcdatamodeld */,
+				44F1C65E201927ED00DD0765 /* CoreDataStack.swift */,
+				44F1C66320192AAF00DD0765 /* Task+Convenience.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44CA74A1201931BD001DE055 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44F1C66520192BC900DD0765 /* TaskController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		44CA74A2201931DC001DE055 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44F1C64F201924E400DD0765 /* Assets.xcassets */,
+				44F1C651201924E400DD0765 /* LaunchScreen.storyboard */,
+				44F1C654201924E400DD0765 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		44F1C63C201924E400DD0765 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				44F1C648201924E400DD0765 /* AppDelegate.swift */,
-				44F1C64A201924E400DD0765 /* ViewController.swift */,
 				44F1C64C201924E400DD0765 /* Main.storyboard */,
-				44F1C64F201924E400DD0765 /* Assets.xcassets */,
-				44F1C651201924E400DD0765 /* LaunchScreen.storyboard */,
-				44F1C654201924E400DD0765 /* Info.plist */,
+				44CA749F2019319C001DE055 /* ViewControllers */,
+				44CA74A0201931AF001DE055 /* Model */,
+				44CA74A1201931BD001DE055 /* ModelControllers */,
+				44CA74A2201931DC001DE055 /* Resources */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -136,8 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44F1C64B201924E400DD0765 /* ViewController.swift in Sources */,
+				44F1C65B201925BB00DD0765 /* TaskListTableViewController.swift in Sources */,
 				44F1C649201924E400DD0765 /* AppDelegate.swift in Sources */,
+				44F1C66420192AAF00DD0765 /* Task+Convenience.swift in Sources */,
+				44F1C65D201926ED00DD0765 /* TaskDetailTableViewController.swift in Sources */,
+				44F1C6622019291800DD0765 /* Task.xcdatamodeld in Sources */,
+				44F1C65F201927ED00DD0765 /* CoreDataStack.swift in Sources */,
+				44F1C66620192BC900DD0765 /* TaskController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7X639V2D7;
-				INFOPLIST_FILE = Task/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = erikhart1990.Task;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B7X639V2D7;
-				INFOPLIST_FILE = Task/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Task/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = erikhart1990.Task;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -322,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		44F1C6602019291800DD0765 /* Task.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				44F1C6612019291800DD0765 /* Task.xcdatamodel */,
+			);
+			currentVersion = 44F1C6612019291800DD0765 /* Task.xcdatamodel */;
+			path = Task.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 44F1C63D201924E400DD0765 /* Project object */;
 }
