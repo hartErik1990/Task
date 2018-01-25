@@ -13,12 +13,16 @@ class TaskController {
    
     static let shared = TaskController()
     
-    var task: [Task] = []
+    var tasks = [Task]()
    
+    init() {
+        tasks = fetchTasks()
+    }
     // MARK: - CRUD
     func add(taskWithName name: String, notes: String?, due: Date?) {
         let _ = Task(name: name, notes: notes, due: due)
         saveToPersistentStore()
+        tasks = fetchTasks()
     }
     
     func update(task: Task, name: String, notes: String?, due: Date?) {
@@ -26,20 +30,25 @@ class TaskController {
         task.notes = notes
         task.due = due
         saveToPersistentStore()
+        tasks = fetchTasks()
     }
     
     func delete(task: Task) {
-        if let moc = task.managedObjectContext {
-            moc.delete(task)
+        task.managedObjectContext?.delete(task)
             saveToPersistentStore()
-        }
+            tasks = fetchTasks()
+        
+    }
+    
+    func toggleIsCompleteFor(task: Task) {
+        task.isComplete = !task.isComplete
+        saveToPersistentStore()
     }
     
     // MARK: - SaveToPersistentStore
     func saveToPersistentStore() {
-        let moc = CoreDataStack.context
         do {
-            try moc.save()
+            try CoreDataStack.context.save()
         } catch let myCoreDataError {
             print(" there was a problem saving: \(myCoreDataError.localizedDescription)")
         }
